@@ -40,7 +40,7 @@ AC_DEFUN([AM_PATH_LISPDIR],
        -e '/.*\/lib\/x*emacs\/site-lisp$/{s,.*/lib/\(x*emacs/site-lisp\)$,${libdir}/\1,;p;q;}' \
        -e '/.*\/share\/x*emacs\/site-lisp$/{s,.*/share/\(x*emacs/site-lisp\),${datarootdir}/\1,;p;q;}' \
        conftest.out`
-       rm conftest.out
+       ./dorm conftest.out
      fi
    fi
    test -z "$am_cv_lispdir" && am_cv_lispdir='${datadir}/emacs/site-lisp'

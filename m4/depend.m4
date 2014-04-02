@@ -45,7 +45,7 @@ AC_CACHE_CHECK([dependency style of $depcc],
   # instance it was reported that on HP-UX the gcc test will end up
   # making a dummy file named 'D' -- because '-MD' means "put the output
   # in D".
-  rm -rf conftest.dir
+  ./dorm  conftest.dir
   mkdir conftest.dir
   # Copy depcomp to subdir because otherwise we won't find it if we're
   # using a relative directory.
@@ -144,7 +144,7 @@ AC_CACHE_CHECK([dependency style of $depcc],
   done
 
   cd ..
-  rm -rf conftest.dir
+  ./dorm  conftest.dir
 else
   am_cv_$1_dependencies_compiler_type=none
 fi

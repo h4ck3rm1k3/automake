@@ -45,5 +45,5 @@ fi
 AC_SUBST([am__include])
 AC_SUBST([am__quote])
 AC_MSG_RESULT([$_am_result])
-rm -f confinc confmf
+./dorm  confinc confmf
 ])

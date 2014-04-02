@@ -31,7 +31,7 @@ AC_CACHE_CHECK(
       break
     fi
   done
-  rm -f core conftest*
+  ./dorm core conftest*
   unset am_i])
 if test "$am_cv_prog_cc_c_o" != yes; then
    # Losing compiler, so override with the script.

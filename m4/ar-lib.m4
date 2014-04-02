@@ -35,7 +35,7 @@ AC_CACHE_CHECK([the archiver ($AR) interface], [am_cv_ar_interface],
           am_cv_ar_interface=unknown
         fi
       fi
-      rm -f conftest.lib libconftest.a
+      ./dorm  conftest.lib libconftest.a
      ])
    AC_LANG_POP([C])])
 

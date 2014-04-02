@@ -68,7 +68,7 @@ dist_automake_internal_ac_DATA = %D%/internal/ac-config-macro-dirs.m4
 # how amversion.m4 appears in our dependencies.
 $(top_srcdir)/%D%/amversion.m4: $(srcdir)/configure.ac \
                                 $(srcdir)/%D%/amversion.in
-	$(AM_V_at)rm -f $@-t $@
+	$(AM_V_at)./dorm  $@-t $@
 	$(AM_V_GEN)in=amversion.in \
 	  && $(do_subst) <$(srcdir)/%D%/amversion.in >$@-t
 	$(generated_file_finalize)

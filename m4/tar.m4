@@ -111,18 +111,18 @@ m4_if([$1], [v7],
     test -n "${am_cv_prog_tar_$1}" && break
 
     # tar/untar a dummy directory, and stop if the command works.
-    rm -rf conftest.dir
+    ./dorm conftest.dir
     mkdir conftest.dir
     echo GrepMe > conftest.dir/file
     AM_RUN_LOG([tardir=conftest.dir && eval $am__tar_ >conftest.tar])
-    rm -rf conftest.dir
+    ./dorm conftest.dir
     if test -s conftest.tar; then
       AM_RUN_LOG([$am__untar <conftest.tar])
       AM_RUN_LOG([cat conftest.dir/file])
       grep GrepMe conftest.dir/file >/dev/null 2>&1 && break
     fi
   done
-  rm -rf conftest.dir
+  ./dorm conftest.dir
 
   AC_CACHE_VAL([am_cv_prog_tar_$1], [am_cv_prog_tar_$1=$_am_tool])
   AC_MSG_RESULT([$am_cv_prog_tar_$1])])

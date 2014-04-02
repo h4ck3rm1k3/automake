@@ -78,5 +78,5 @@ AC_CONFIG_COMMANDS_PRE(
      wait $am_sleep_pid 2>/dev/null
    fi
    AC_MSG_RESULT([done])])
-rm -f conftest.file
+./dorm  conftest.file
 ])
